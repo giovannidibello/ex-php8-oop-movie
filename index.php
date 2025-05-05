@@ -35,8 +35,8 @@
 require_once "./Models/Movie.php";
 require_once "./Models/Genre.php";
 
-$inception = new Movie("Inception", "Christopher Nolan", 2010, new Genre("Sci-Fi", "Molto alta"));
-$pulp = new Movie("Pulp Fiction", "Quentin Tarantino", 1994, new Genre("Crime", "Iconico"));
+$inception = new Movie("Inception", "Christopher Nolan", 2010, [new Genre("Sci-Fi"), new Genre("Azione"), new Genre("Thriller")]);
+$pulp = new Movie("Pulp Fiction", "Quentin Tarantino", 1994, [new Genre("Crime"), new Genre("Drammatico"), new Genre("Commedia nera")]);
 
 var_dump($inception);
 var_dump($pulp);

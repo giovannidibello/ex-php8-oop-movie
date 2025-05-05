@@ -4,11 +4,9 @@ class Genre
 {
 
     public $name;
-    public $popularity;
 
-    function __construct($_name, $_popularity)
+    function __construct($_name)
     {
         $this->name = $_name;
-        $this->popularity = $_popularity;
     }
 }
