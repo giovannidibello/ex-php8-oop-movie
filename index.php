@@ -39,8 +39,8 @@ require_once "./db.php";
 // var_dump($inception);
 // var_dump($pulp);
 
-echo $inception->toString();
-echo $pulp->toString();
+// echo $inception->toString();
+// echo $pulp->toString();
 
 ?>
 
@@ -52,11 +52,32 @@ echo $pulp->toString();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOP Film</title>
+    <!-- importo bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- importo css -->
+    <link rel="stylesheet" href="./Css/style.css">
+    <title>OOP Movies</title>
 </head>
 
 <body>
 
+    <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <h1 class="page-title text-white">🎬 OOP Movies</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4 w-100">
+            <?php foreach ($movies as $movie): ?>
+                <div class="col">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $movie->title; ?></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $movie->director; ?> (<?php echo $movie->releaseYear; ?>)</h6>
+                            <p class="card-text"><strong>Generi:</strong> <?php echo $movie->getArrayAsString(); ?></p>
+                            <p class="card-text"><?php echo $movie->getDescription(); ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 
 </body>
 

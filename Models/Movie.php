@@ -33,8 +33,8 @@ class Movie
     }
 
     // metodo che restituisce una stringa dall'oggetto
-    public function toString()
-    {
-        return "Titolo: {$this->title}, Direttore: {$this->director}, Anno: {$this->releaseYear}, Genere: {$this->getArrayAsString()} , Descrizione: {$this->getDescription()} <br>";
-    }
+    // public function toString()
+    // {
+    //     return "Titolo: {$this->title}, Direttore: {$this->director}, Anno: {$this->releaseYear}, Genere: {$this->getArrayAsString()} , Descrizione: {$this->getDescription()} <br>";
+    // }
 }
