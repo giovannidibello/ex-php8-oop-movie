@@ -1,7 +1,12 @@
 <?php
 
+// importo il tratto
+require_once "./Traits/Description.php";
+
 class Movie
 {
+    // uso il tratto
+    use HasDescription;
 
     public $title;
     public $director;
@@ -30,6 +35,6 @@ class Movie
     // metodo che restituisce una stringa dall'oggetto
     public function toString()
     {
-        return "Titolo: {$this->title}, Direttore: {$this->director}, Anno: {$this->releaseYear}, Genere: {$this->getArrayAsString()} <br>";
+        return "Titolo: {$this->title}, Direttore: {$this->director}, Anno: {$this->releaseYear}, Genere: {$this->getArrayAsString()} , Descrizione: {$this->getDescription()} <br>";
     }
 }

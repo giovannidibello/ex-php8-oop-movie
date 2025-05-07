@@ -41,6 +41,8 @@ $pulp = new Movie("Pulp Fiction", "Quentin Tarantino", 1994, [new Genre("Crime")
 var_dump($inception);
 var_dump($pulp);
 
+$inception->setDescription("Un film che fa");
+
 echo $inception->toString();
 echo $pulp->toString();
 
